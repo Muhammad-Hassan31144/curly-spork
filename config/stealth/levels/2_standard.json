@@ -1,0 +1,35 @@
+{
+  "level": 2,
+  "name": "standard",
+  "description": "Standard anti-detection - good balance of stealth vs performance",
+  "enabled": true,
+  "hardware_stealth": {
+    "enabled": true,
+    "randomize_mac": true,
+    "modify_smbios": true,
+    "randomize_disk_serial": true,
+    "cpu_modifications": false,
+    "hardware_profile": "dell_optiplex"
+  },
+  "software_stealth": {
+    "enabled": true,
+    "hide_vm_tools": true,
+    "clean_vm_registry": true,
+    "patch_vm_artifacts": false,
+    "modify_vm_services": false,
+    "install_decoy_software": false
+  },
+  "behavioral_stealth": {
+    "enabled": true,
+    "create_user_artifacts": true,
+    "simulate_usage_patterns": false,
+    "generate_browsing_history": false,
+    "create_system_activity": false
+  },
+  "network_stealth": {
+    "enabled": false
+  },
+  "validation": {
+    "required_tests": ["registry_detection", "file_detection", "process_detection"]
+  }
+}

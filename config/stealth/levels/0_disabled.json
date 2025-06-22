@@ -1,0 +1,21 @@
+{
+  "level": 0,
+  "name": "disabled",
+  "description": "No stealth measures applied",
+  "enabled": false,
+  "hardware_stealth": {
+    "enabled": false
+  },
+  "software_stealth": {
+    "enabled": false
+  },
+  "behavioral_stealth": {
+    "enabled": false
+  },
+  "network_stealth": {
+    "enabled": false
+  },
+  "validation": {
+    "required_tests": []
+  }
+}

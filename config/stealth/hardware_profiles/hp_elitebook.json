@@ -1,0 +1,65 @@
+{
+  "name": "hp_elitebook",
+  "description": "HP EliteBook 840 G8",
+  "manufacturer": "HP",
+  "system": {
+    "manufacturer": "HP",
+    "product_name": "HP EliteBook 840 G8 Notebook PC",
+    "version": "1.0",
+    "serial_number": "TEMPLATE_SERIAL",
+    "uuid": "TEMPLATE_UUID",
+    "family": "103C_5336AN HP EliteBook"
+  },
+  "bios": {
+    "vendor": "HP",
+    "version": "S70 Ver. 01.16.00",
+    "release_date": "11/22/2023",
+    "rom_size": "32768 KB"
+  },
+  "motherboard": {
+    "manufacturer": "HP",
+    "product_name": "8846",
+    "version": "KBC Version 04.63.00",
+    "serial_number": "TEMPLATE_MB_SERIAL",
+    "asset_tag": "TEMPLATE_ASSET_TAG"
+  },
+  "chassis": {
+    "manufacturer": "HP",
+    "type": "Notebook",
+    "version": "1.0",
+    "serial_number": "TEMPLATE_CHASSIS_SERIAL", 
+    "asset_tag": "TEMPLATE_CHASSIS_TAG"
+  },
+  "processor": {
+    "family": "Core i7",
+    "manufacturer": "Intel(R) Corporation",
+    "version": "Intel(R) Core(TM) i7-1185G7 CPU @ 3.00GHz",
+    "signature": "Family 6 Model 140 Stepping 1"
+  },
+  "memory": {
+    "total_size": "32 GB",
+    "modules": [
+      {
+        "size": "16 GB",
+        "type": "DDR4",
+        "speed": "3200 MHz", 
+        "manufacturer": "SK Hynix",
+        "part_number": "HMA82GS6CJR8N-VK"
+      }
+    ]
+  },
+  "network": {
+    "mac_oui": "3C:52:82",
+    "interface_name": "Intel(R) Wi-Fi 6E AX210 160MHz",
+    "pci_id": "8086:2725"
+  },
+  "storage": {
+    "primary_disk": {
+      "model": "Samsung SSD 980 1TB",
+      "serial": "TEMPLATE_DISK_SERIAL",
+      "size": "1000 GB", 
+      "interface": "NVMe",
+      "firmware": "3B4QFXO7"
+    }
+  }
+}

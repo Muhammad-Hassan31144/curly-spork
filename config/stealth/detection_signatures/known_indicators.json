@@ -1,0 +1,80 @@
+{
+  "description": "Known VM detection methods and indicators used by malware",
+  "version": "1.0",
+  "last_updated": "2024-01-15",
+  "detection_methods": {
+    "cpuid_checks": {
+      "description": "CPU ID instruction checks for hypervisor bit",
+      "indicators": [
+        "CPUID leaf 0x40000000",
+        "Hypervisor present bit",
+        "VMware signature detection",
+        "VirtualBox signature detection"
+      ],
+      "mitigation": "Modify CPUID responses to hide hypervisor presence"
+    },
+    "dmi_checks": {
+      "description": "DMI/SMBIOS table checks for VM indicators",
+      "indicators": [
+        "System manufacturer: VMware, Inc.",
+        "System manufacturer: innotek GmbH", 
+        "System manufacturer: QEMU",
+        "BIOS vendor: Phoenix Technologies LTD"
+      ],
+      "mitigation": "Spoof DMI tables with realistic hardware information"
+    },
+    "registry_checks": {
+      "description": "Windows registry checks for VM artifacts",
+      "indicators": [
+        "VM Tools installation keys",
+        "VM service registration keys",
+        "VM device driver keys"
+      ],
+      "mitigation": "Clean or modify registry entries"
+    },
+    "timing_checks": {
+      "description": "Timing-based VM detection methods",
+      "indicators": [
+        "RDTSC instruction timing",
+        "Sleep/delay timing inconsistencies",
+        "Instruction execution timing"
+      ],
+      "mitigation": "Implement timing variation and delay injection"
+    }
+  },
+  "common_malware_families": {
+    "ransomware": {
+      "typical_checks": [
+        "VirtualBox detection via registry",
+        "VMware detection via DMI",
+        "Process enumeration for VM tools"
+      ],
+      "evasion_level": "medium"
+    },
+    "banking_trojans": {
+      "typical_checks": [
+        "Comprehensive VM detection",
+        "Sandbox environment detection",
+        "User interaction validation"
+      ],
+      "evasion_level": "high"
+    }
+  },
+  "stealth_priorities": {
+    "high_priority": [
+      "CPUID hypervisor bit masking",
+      "DMI/SMBIOS spoofing",
+      "VM process termination",
+      "VM registry key removal"
+    ],
+    "medium_priority": [
+      "VM file hiding/renaming",
+      "Network MAC address randomization",
+      "User artifact creation"
+    ],
+    "low_priority": [
+      "Advanced timing manipulation",
+      "Deep behavioral simulation"
+    ]
+  }
+}

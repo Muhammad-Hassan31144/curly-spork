@@ -1,0 +1,59 @@
+2025-06-09 12:15:42 - [0;32m======================================[0m
+2025-06-09 12:15:42 - [0;32m  Starting Shikra Environment Setup   [0m
+2025-06-09 12:15:42 - [0;32m======================================[0m
+2025-06-09 12:15:42 - Project Root: /home/hassan/shikra/setup
+2025-06-09 12:15:42 - Log File:     /home/hassan/shikra/setup/logs/setup.log
+2025-06-09 12:15:42 - Setup Configuration:
+2025-06-09 12:15:42 -   - Skip Virtualization: false
+2025-06-09 12:15:42 -   - Skip Network: false
+2025-06-09 12:15:42 -   - Minimal Install: false
+2025-06-09 12:15:42 -   - Force Reinstall: false
+2025-06-09 12:15:42 -   - Dry Run: false
+2025-06-09 12:15:42 - [0;34mPhase 1: Checking system requirements...[0m
+2025-06-09 12:15:42 - Operating System: Ubuntu 24.04.1 LTS
+2025-06-09 12:15:42 - [0;32mCPU virtualization support detected.[0m
+2025-06-09 12:15:42 - [0;32mSufficient RAM available: 11GB.[0m
+2025-06-09 12:15:42 - [0;32mSufficient disk space available: 149GB.[0m
+2025-06-09 12:15:42 - [0;32mSystem requirements check passed.[0m
+2025-06-09 12:15:42 - [0;32mData directories already exist, skipping.[0m
+2025-06-09 12:15:42 - [0;34mInstalling required system packages...[0m
+2025-06-09 12:15:42 - [0;34mSetting up Python virtual environment...[0m
+2025-06-09 12:15:42 - [0;34mSetting up QEMU/KVM and Libvirt...[0m
+2025-06-09 12:15:43 - Added user 'hassan' to 'libvirt' and 'kvm' groups. A re-login is required for this to take effect.
+2025-06-09 12:15:43 - [0;32mVirtualization setup complete.[0m
+2025-06-09 12:15:43 - [0;34mConfiguring default libvirt network...[0m
+2025-06-09 12:15:45 - Default network is already active.
+2025-06-09 12:15:45 - [0;32mDefault libvirt network is active.[0m
+2025-06-09 12:15:45 - [0;34mInstalling external analysis tools...[0m
+2025-06-09 12:15:45 - Downloading Sysinternals tools...
+2025-06-09 12:32:09 - [0;32m======================================[0m
+2025-06-09 12:32:09 - [0;32m  Starting Shikra Environment Setup   [0m
+2025-06-09 12:32:09 - [0;32m======================================[0m
+2025-06-09 12:32:09 - Project Root: /home/hassan/shikra/setup
+2025-06-09 12:32:09 - Log File:     /home/hassan/shikra/setup/logs/setup.log
+2025-06-09 12:32:09 - Setup Configuration:
+2025-06-09 12:32:09 -   - Skip Virtualization: false
+2025-06-09 12:32:09 -   - Skip Network: false
+2025-06-09 12:32:09 -   - Minimal Install: true
+2025-06-09 12:32:09 -   - Force Reinstall: false
+2025-06-09 12:32:09 -   - Dry Run: false
+2025-06-09 12:32:09 - [0;34mPhase 1: Checking system requirements...[0m
+2025-06-09 12:32:09 - Operating System: Ubuntu 24.04.1 LTS
+2025-06-09 12:32:09 - [0;32mCPU virtualization support detected.[0m
+2025-06-09 12:32:09 - [0;32mSufficient RAM available: 11GB.[0m
+2025-06-09 12:32:09 - [0;32mSufficient disk space available: 149GB.[0m
+2025-06-09 12:32:09 - [0;32mSystem requirements check passed.[0m
+2025-06-09 12:32:09 - [0;32mData directories already exist, skipping.[0m
+2025-06-09 12:32:09 - [0;32mSystem packages already installed, skipping.[0m
+2025-06-09 12:32:09 - [0;32mVirtual environment already exists, skipping.[0m
+2025-06-09 12:32:09 - [0;32mVirtualization seems to be already set up, skipping.[0m
+2025-06-09 12:32:09 - [0;32mNetwork already configured, skipping.[0m
+2025-06-09 12:32:09 - [1;33mSkipping external analysis tools installation (minimal mode).[0m
+2025-06-09 12:32:09 - [0;34mCreating default configuration files...[0m
+2025-06-09 12:32:09 - Created default configuration files
+2025-06-09 12:32:09 - [0;34mFinalizing directory permissions and ownership...[0m
+2025-06-09 12:32:09 - Set ownership of project root to 'hassan'.
+2025-06-09 12:32:09 - [0;32mPermissions configured successfully.[0m
+2025-06-09 12:32:09 - [0;32m========================================[0m
+2025-06-09 12:32:09 - [0;32m  Shikra Environment Setup Completed!   [0m
+2025-06-09 12:32:09 - [0;32m========================================[0m

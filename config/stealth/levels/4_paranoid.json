@@ -1,0 +1,52 @@
+{
+  "level": 4,
+  "name": "paranoid", 
+  "description": "Maximum stealth - all available evasion techniques",
+  "enabled": true,
+  "hardware_stealth": {
+    "enabled": true,
+    "randomize_mac": true,
+    "modify_smbios": true,
+    "randomize_disk_serial": true,
+    "cpu_modifications": true,
+    "hardware_profile": "hp_elitebook",
+    "advanced_timing": true,
+    "randomize_memory_layout": true
+  },
+  "software_stealth": {
+    "enabled": true,
+    "hide_vm_tools": true,
+    "clean_vm_registry": true,
+    "patch_vm_artifacts": true,
+    "modify_vm_services": true,
+    "install_decoy_software": true,
+    "deep_artifact_removal": true,
+    "advanced_registry_hiding": true
+  },
+  "behavioral_stealth": {
+    "enabled": true,
+    "create_user_artifacts": true,
+    "simulate_usage_patterns": true,
+    "generate_browsing_history": true,
+    "create_system_activity": true,
+    "simulate_long_term_usage": true,
+    "create_fake_user_accounts": true
+  },
+  "network_stealth": {
+    "enabled": true,
+    "populate_network_artifacts": true,
+    "simulate_network_history": true,
+    "create_fake_connections": true,
+    "populate_dns_cache": true
+  },
+  "validation": {
+    "required_tests": ["registry_detection", "file_detection", "process_detection", "hardware_detection", "network_detection", "timing_detection"],
+    "effectiveness_threshold": 0.90,
+    "deep_validation": true
+  },
+  "advanced_options": {
+    "anti_debugger": true,
+    "anti_vm_specific": true,
+    "code_injection_protection": true
+  }
+}

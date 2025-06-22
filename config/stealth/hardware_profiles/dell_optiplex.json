@@ -1,0 +1,65 @@
+{
+  "name": "dell_optiplex",
+  "description": "Dell OptiPlex 7090 Desktop",
+  "manufacturer": "Dell Inc.",
+  "system": {
+    "manufacturer": "Dell Inc.",
+    "product_name": "OptiPlex 7090",
+    "version": "1.0.0",
+    "serial_number": "TEMPLATE_SERIAL",
+    "uuid": "TEMPLATE_UUID",
+    "family": "OptiPlex"
+  },
+  "bios": {
+    "vendor": "Dell Inc.", 
+    "version": "2.8.0",
+    "release_date": "03/15/2023",
+    "rom_size": "32768 KB"
+  },
+  "motherboard": {
+    "manufacturer": "Dell Inc.",
+    "product_name": "0D24M8", 
+    "version": "A00",
+    "serial_number": "TEMPLATE_MB_SERIAL",
+    "asset_tag": "TEMPLATE_ASSET_TAG"
+  },
+  "chassis": {
+    "manufacturer": "Dell Inc.",
+    "type": "Desktop",
+    "version": "1.0.0",
+    "serial_number": "TEMPLATE_CHASSIS_SERIAL",
+    "asset_tag": "TEMPLATE_CHASSIS_TAG"
+  },
+  "processor": {
+    "family": "Core i7",
+    "manufacturer": "Intel(R) Corporation",
+    "version": "Intel(R) Core(TM) i7-11700 CPU @ 2.50GHz",
+    "signature": "Family 6 Model 167 Stepping 1"
+  },
+  "memory": {
+    "total_size": "16 GB",
+    "modules": [
+      {
+        "size": "8 GB",
+        "type": "DDR4",
+        "speed": "3200 MHz",
+        "manufacturer": "Samsung",
+        "part_number": "M378A1K43EB2-CWE"
+      }
+    ]
+  },
+  "network": {
+    "mac_oui": "B8:CA:3A",
+    "interface_name": "Intel(R) Ethernet Connection (17) I219-LM",
+    "pci_id": "8086:15FB"
+  },
+  "storage": {
+    "primary_disk": {
+      "model": "WDC WD10EZEX-08WN4A0",
+      "serial": "TEMPLATE_DISK_SERIAL",
+      "size": "1000 GB",
+      "interface": "SATA",
+      "firmware": "01.01A01"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "win10_default",
+  "description": "Default Windows 10 analysis environment",
+  "vm_config": {
+    "os_type": "windows",
+    "memory_mb": 4096,
+    "vcpus": 2,
+    "disk_size_gb": 60,
+    "network": "default"
+  },
+  "analysis_tools": ["procmon", "procexp", "autoruns"]
+}

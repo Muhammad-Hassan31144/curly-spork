@@ -1,0 +1,92 @@
+{
+  "description": "Known VM artifacts that should be hidden or modified",
+  "version": "1.0",
+  "last_updated": "2024-01-15",
+  "registry_keys": {
+    "windows": [
+      "HKLM\\SOFTWARE\\Oracle\\VirtualBox Guest Additions",
+      "HKLM\\SOFTWARE\\VMware, Inc.\\VMware Tools",
+      "HKLM\\SYSTEM\\ControlSet001\\Services\\VBoxGuest",
+      "HKLM\\SYSTEM\\ControlSet001\\Services\\VBoxMouse", 
+      "HKLM\\SYSTEM\\ControlSet001\\Services\\VBoxService",
+      "HKLM\\SYSTEM\\ControlSet001\\Services\\VBoxSF",
+      "HKLM\\SYSTEM\\ControlSet001\\Services\\VBoxVideo",
+      "HKLM\\SYSTEM\\ControlSet001\\Services\\VMTools",
+      "HKLM\\SYSTEM\\ControlSet001\\Services\\VMMEMCTL",
+      "HKLM\\SYSTEM\\ControlSet001\\Services\\vmdebug",
+      "HKLM\\SYSTEM\\ControlSet001\\Services\\vmmouse",
+      "HKLM\\SYSTEM\\ControlSet001\\Services\\vmhgfs",
+      "HKLM\\SYSTEM\\ControlSet001\\Services\\vmci",
+      "HKLM\\SYSTEM\\ControlSet001\\Services\\vmx86",
+      "HKLM\\SOFTWARE\\Microsoft\\Virtual Machine\\Guest\\Parameters",
+      "HKLM\\SOFTWARE\\Microsoft\\VirtualMachine"
+    ]
+  },
+  "file_paths": {
+    "windows": [
+      "C:\\Program Files\\Oracle\\VirtualBox Guest Additions",
+      "C:\\Program Files\\VMware\\VMware Tools",
+      "C:\\Windows\\System32\\drivers\\VBoxGuest.sys",
+      "C:\\Windows\\System32\\drivers\\VBoxMouse.sys",
+      "C:\\Windows\\System32\\drivers\\VBoxSF.sys",
+      "C:\\Windows\\System32\\drivers\\VBoxVideo.sys",
+      "C:\\Windows\\System32\\vboxdisp.dll",
+      "C:\\Windows\\System32\\vboxhook.dll",
+      "C:\\Windows\\System32\\vboxservice.exe",
+      "C:\\Windows\\System32\\vmtoolsd.exe"
+    ],
+    "linux": [
+      "/usr/bin/VBoxClient",
+      "/usr/bin/VBoxControl", 
+      "/usr/bin/VBoxService",
+      "/etc/init.d/vboxadd",
+      "/usr/bin/vmware-toolbox-cmd",
+      "/dev/vboxguest",
+      "/dev/vmci"
+    ]
+  },
+  "process_names": {
+    "windows": [
+      "VBoxService.exe",
+      "VBoxTray.exe", 
+      "VBoxClient.exe",
+      "vmtoolsd.exe",
+      "vmwaretray.exe",
+      "vmwareuser.exe",
+      "qemu-ga.exe"
+    ],
+    "linux": [
+      "VBoxService",
+      "VBoxClient",
+      "vboxadd-service",
+      "vmtoolsd",
+      "vmware-guestd",
+      "qemu-ga"
+    ]
+  },
+  "service_names": {
+    "windows": [
+      "VBoxGuest",
+      "VBoxMouse",
+      "VBoxService", 
+      "VBoxSF",
+      "VBoxVideo",
+      "VMTools",
+      "QEMU Guest Agent"
+    ]
+  },
+  "network_indicators": {
+    "mac_prefixes": [
+      "00:0C:29", "00:1C:14", "00:50:56", "00:05:69",
+      "08:00:27", "0A:00:27",
+      "52:54:00",
+      "00:15:5D"
+    ]
+  },
+  "hardware_strings": [
+    "VBOX", "VirtualBox", "Oracle Corporation", "Innotek GmbH",
+    "VMware", "VMware, Inc.", "VMware Virtual Platform", 
+    "QEMU", "Bochs", "SeaBIOS", "KVM", "Red Hat",
+    "Microsoft Corporation", "Virtual Machine", "Hyper-V"
+  ]
+}

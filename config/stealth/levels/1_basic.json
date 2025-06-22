@@ -1,0 +1,30 @@
+{
+  "level": 1,
+  "name": "basic",
+  "description": "Basic VM hiding - minimal detection evasion",
+  "enabled": true,
+  "hardware_stealth": {
+    "enabled": true,
+    "randomize_mac": true,
+    "modify_smbios": false,
+    "randomize_disk_serial": false,
+    "cpu_modifications": false
+  },
+  "software_stealth": {
+    "enabled": true,
+    "hide_vm_tools": true,
+    "clean_vm_registry": false,
+    "patch_vm_artifacts": false,
+    "modify_vm_services": false,
+    "install_decoy_software": false
+  },
+  "behavioral_stealth": {
+    "enabled": false
+  },
+  "network_stealth": {
+    "enabled": false
+  },
+  "validation": {
+    "required_tests": ["process_detection", "basic_file_detection"]
+  }
+}

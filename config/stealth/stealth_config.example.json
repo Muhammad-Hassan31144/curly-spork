@@ -1,0 +1,21 @@
+{
+  "default_level": 3,
+  "default_hardware_profile": "dell_optiplex", 
+  "validation_enabled": true,
+  "cleanup_on_shutdown": true,
+  "logging": {
+    "enabled": true,
+    "level": "INFO",
+    "file": "logs/stealth.log"
+  },
+  "hypervisor_settings": {
+    "qemu": {
+      "cpu_features": ["-hypervisor", "+rdrand", "+rdseed"],
+      "machine_type": "pc-q35-5.2"
+    },
+    "virtualbox": {
+      "modify_guest_properties": true,
+      "hide_host_info": true
+    }
+  }
+}
