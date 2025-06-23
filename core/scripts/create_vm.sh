@@ -508,11 +508,35 @@ load_vm_profile() {
     fi
 
     # Load profile values with enhanced defaults for Windows
-    MEMORY_MB=${MEMORY_MB:-$(jq -r '.vm_config.memory_mb // 8192' "$profile_file")}
-    DISK_SIZE_GB=${DISK_SIZE_GB:-$(jq -r '.vm_config.disk_size_gb // 80' "$profile_file")}
-    VCPUS=$(jq -r '.vm_config.vcpus // 4' "$profile_file")
-    OS_TYPE=$(jq -r '.vm_config.os_type // "windows"' "$profile_file")
-    NETWORK=$(jq -r '.vm_config.network // "shikra-isolated"' "$profile_file")
+    # MEMORY_MB=${MEMORY_MB:-$(jq -r '.vm_config.memory_mb // 8192' "$profile_file")}
+    # DISK_SIZE_GB=${DISK_SIZE_GB:-$(jq -r '.vm_config.disk_size_gb // 80' "$profile_file")}
+    # VCPUS=$(jq -r '.vm_config.vcpus // 4' "$profile_file")
+    # OS_TYPE=$(jq -r '.vm_config.os_type // "windows"' "$profile_file")
+    # NETWORK=$(jq -r '.vm_config.network // "shikra-isolated"' "$profile_file")
+    MEMORY_MB=${MEMORY_MB:-$(jq -r '
+          .vm_config.memory_mb
+       // .vm_configuration.hardware.memory_mb
+       // 8192' "$profile_file")}
+    
+    DISK_SIZE_GB=${DISK_SIZE_GB:-$(jq -r '
+          .vm_config.disk_size_gb
+       // .vm_configuration.hardware.disk_size_gb
+       // 80' "$profile_file")}
+    
+    VCPUS=$(jq -r '
+          .vm_config.vcpus
+       // .vm_configuration.hardware.cpu_cores
+       // 4' "$profile_file")
+    
+    OS_TYPE=$(jq -r '
+          .vm_config.os_type
+       // .vm_configuration.guest_os.type
+       // "windows"' "$profile_file")
+    
+    NETWORK=$(jq -r '
+          .vm_config.network
+       // .network_configuration.isolation.network_name
+       // "shikra-isolated"' "$profile_file")
 
     log "Configuration loaded:"
     log "  - Memory: ${MEMORY_MB}MB, Disk: ${DISK_SIZE_GB}GB, vCPUs: ${VCPUS}"
