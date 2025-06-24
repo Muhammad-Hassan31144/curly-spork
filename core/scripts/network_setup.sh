@@ -127,14 +127,13 @@ parse_arguments() {
 
   # guard: choose one main action
   local main_flags=0
-  +  [[ $CREATE_ISOLATED == true ]] && ((main_flags++))
-  +  [[ $CLEANUP_NETWORK  == true ]] && ((main_flags++))
-  +  [[ $ACTION_STATUS    == true ]] && ((main_flags++))
-  +  [[ $ENABLE_NAT       == true ]] && ((main_flags++))
-  +  [[ $DISABLE_NAT      == true ]] && ((main_flags++))
-  +
-  +  (( main_flags == 0 )) && fatal "You must specify an action (e.g. --create-isolated)"
-  +  (( main_flags > 1 ))  && fatal "Choose *one* primary action at a time"
+  [[ $CREATE_ISOLATED == true ]] && ((main_flags++))
+  [[ $CLEANUP_NETWORK  == true ]] && ((main_flags++))
+  [[ $ACTION_STATUS    == true ]] && ((main_flags++))
+  [[ $ENABLE_NAT       == true ]] && ((main_flags++))
+  [[ $DISABLE_NAT      == true ]] && ((main_flags++))
+  (( main_flags == 0 )) && fatal "You must specify an action (e.g. --create-isolated)"
+  (( main_flags > 1 ))  && fatal "Choose *one* primary action at a time"
 }
 
 # --- Prerequisites ------------------------------------------------------------
