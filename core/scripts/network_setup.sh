@@ -57,6 +57,8 @@ ENABLE_INETSIM=false    # --enable-inetsim (supersedes fake services)
 ENABLE_NAT=false        # --enable-nat (insert/remove NAT rules)
 BLOCK_IPV6=false        # --block-ipv6 (add ip6tables kills)
 PERSIST_RULES=false     # --persist (save iptables to /etc)
+ACTION_STATUS=false     # --status
+DISABLE_NAT=false       # --disable-nat
 DRY_RUN=false           # --dry-run
 BRIDGE_NAME=""          # computed from network name
 
@@ -124,9 +126,15 @@ parse_arguments() {
   BRIDGE_NAME="br-$(echo "$NETWORK_NAME" | tr '[:upper:]' '[:lower:]' | tr -cd 'a-z0-9' | cut -c 1-12)"
 
   # guard: choose one main action
-  local main_flags=$(( CREATE_ISOLATED+CLEANUP_NETWORK+ACTION_STATUS+ENABLE_NAT+DISABLE_NAT ))
-  (( main_flags == 0 )) && fatal "You must specify an action (e.g. --create-isolated)"
-  (( main_flags > 1 ))  && fatal "Choose *one* primary action at a time"
+  local main_flags=0
+  +  [[ $CREATE_ISOLATED == true ]] && ((main_flags++))
+  +  [[ $CLEANUP_NETWORK  == true ]] && ((main_flags++))
+  +  [[ $ACTION_STATUS    == true ]] && ((main_flags++))
+  +  [[ $ENABLE_NAT       == true ]] && ((main_flags++))
+  +  [[ $DISABLE_NAT      == true ]] && ((main_flags++))
+  +
+  +  (( main_flags == 0 )) && fatal "You must specify an action (e.g. --create-isolated)"
+  +  (( main_flags > 1 ))  && fatal "Choose *one* primary action at a time"
 }
 
 # --- Prerequisites ------------------------------------------------------------
