@@ -581,17 +581,17 @@ install_monitoring_tools() {
     }
     
     # Download Noriben behavioral analysis tool
-    if [[ ! -d "Noriben" ]]; then
-        log "Cloning Noriben repository..."
-        if git clone https://github.com/Rurik/Noriben.git; then
-            log "${GREEN}Noriben cloned successfully into $TOOLS_DIR/Noriben${NC}"
-        else
-            log "${RED}Error: Failed to clone Noriben repository${NC}"
-            echo "MANUAL_INSTALL_NEEDED: Noriben - git clone https://github.com/Rurik/Noriben.git" >> "$PROJECT_ROOT/logs/manual_installs_needed.txt"
-        fi
-    else
-        log "Noriben already exists in $TOOLS_DIR, skipping download."
-    fi
+    # if [[ ! -d "Noriben" ]]; then
+    #     log "Cloning Noriben repository..."
+    #     if git clone https://github.com/Rurik/Noriben.git; then
+    #         log "${GREEN}Noriben cloned successfully into $TOOLS_DIR/Noriben${NC}"
+    #     else
+    #         log "${RED}Error: Failed to clone Noriben repository${NC}"
+    #         echo "MANUAL_INSTALL_NEEDED: Noriben - git clone https://github.com/Rurik/Noriben.git" >> "$PROJECT_ROOT/logs/manual_installs_needed.txt"
+    #     fi
+    # else
+    #     log "Noriben already exists in $TOOLS_DIR, skipping download."
+    # fi
     
     # Download Sysinternals Suite for Windows VM deployment
     if [[ ! -f "SysinternalsSuite.zip" && ! -d "SysinternalsSuite" ]]; then
