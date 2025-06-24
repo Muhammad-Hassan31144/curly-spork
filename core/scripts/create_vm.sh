@@ -1,4 +1,3 @@
-# #!/bin/bash
 # # Shikra VM Creation Script
 # #
 # # Purpose:
